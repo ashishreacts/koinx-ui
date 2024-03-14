@@ -41,6 +41,6 @@ const data = {
     },
   ],
 };
-export const CreateChart = () => {
+export const CryptoPriceLineChart = () => {
   return <Line options={options} data={data} />;
 };

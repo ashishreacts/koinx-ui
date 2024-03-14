@@ -8,7 +8,7 @@ import {
   Stack,
   Typography,
 } from "@mui/material";
-import { CreateChart } from "./CreateChart";
+import { CryptoPriceLineChart } from "./CryptoPriceLineChart";
 
 export const BitcoinOverview = () => {
   return (
@@ -45,7 +45,7 @@ export const BitcoinOverview = () => {
           <Chip label="1Y" />
           <Chip label="ALL" />
         </Stack>
-        <CreateChart />
+        <CryptoPriceLineChart />
       </Paper>
     </Container>
   );
