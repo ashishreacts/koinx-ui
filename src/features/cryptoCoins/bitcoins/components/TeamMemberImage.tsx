@@ -8,7 +8,7 @@ export const TeamMemberImage = (data: {
 }) => {
   return (
     <Box>
-      <CardMedia component="img" sx={{ width: 120, p: 1 }} image={data.image} />
+      <CardMedia component="img" sx={{ p: 1 }} image={data.image} />
       <ImageListItemBar
         title={data.name}
         subtitle={<span>{data.designation}</span>}
