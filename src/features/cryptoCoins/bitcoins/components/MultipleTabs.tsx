@@ -1,31 +1,5 @@
-import { Box, Tabs, Tab, Typography } from "@mui/material";
+import { Box, Tab, Tabs } from "@mui/material";
 import React from "react";
-
-type TabPanelProps = {
-  children?: React.ReactNode;
-  index: number;
-  value: number;
-};
-
-const CustomTabPanel = (props: TabPanelProps) => {
-  const { children, value, index, ...other } = props;
-
-  return (
-    <div
-      role="tabpanel"
-      hidden={value !== index}
-      id={`simple-tabpanel-${index}`}
-      aria-labelledby={`simple-tab-${index}`}
-      {...other}
-    >
-      {value === index && (
-        <Box sx={{ p: 3 }}>
-          <Typography>{children}</Typography>
-        </Box>
-      )}
-    </div>
-  );
-};
 
 function a11yProps(index: number) {
   return {
@@ -34,7 +8,7 @@ function a11yProps(index: number) {
   };
 }
 export const MultipleTabs = () => {
-  const tabPanelLabel = [
+  const tabLabel = [
     "Overview",
     "Fundamentals",
     "News Insights",
@@ -56,16 +30,11 @@ export const MultipleTabs = () => {
           onChange={handleChange}
           aria-label="basic tabs example"
         >
-          {tabPanelLabel.map((label, index) => (
+          {tabLabel.map((label, index) => (
             <Tab label={label} {...a11yProps(index)} key={index} />
           ))}
         </Tabs>
       </Box>
-      {tabPanelLabel.map((item, index) => (
-        <CustomTabPanel value={value} index={index} key={index}>
-          {item}
-        </CustomTabPanel>
-      ))}
     </Box>
   );
 };
