@@ -15,7 +15,7 @@ export const KoinxUI = () => {
     <ContentLayout title="">
       <BitcoinBreadCrumb />
       <Grid container marginTop={0.5} spacing={2}>
-        <Grid item xs={12} md={8}>
+        <Grid item xs={12} md={9}>
           <Stack direction="column" spacing={2}>
             <BitcoinOverview />
             <FeatureTabs />
@@ -25,7 +25,7 @@ export const KoinxUI = () => {
             <AboutTeam />
           </Stack>
         </Grid>
-        <Grid item xs={12} md={4}>
+        <Grid item xs={12} md={3}>
           <Stack direction="column" spacing={2}>
             <BrandAdvertisement />
             <TrendingCoins />

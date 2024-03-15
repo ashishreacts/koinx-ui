@@ -1,17 +1,10 @@
-import {
-  Box,
-  Card,
-  CardContent,
-  CardHeader,
-  LinearProgress,
-  Stack,
-  Typography,
-} from "@mui/material";
+import { Box, Card, CardContent, CardHeader, Typography } from "@mui/material";
 import { MultipleTabs } from "./MultipleTabs";
+import { PerformanceData } from "./PerforManceData";
 import { PerformanceTable } from "./PerformanceTable";
 
 export const FeatureTabs = () => {
-  const performanceData = [
+  const Data = [
     {
       label1: "Today's Low",
       value1: "40,930.22",
@@ -34,35 +27,7 @@ export const FeatureTabs = () => {
       <Card>
         <CardHeader title={<Typography variant="h4">Performance</Typography>} />
         <CardContent>
-          {performanceData.map((data, index) => (
-            <Stack
-              direction="row"
-              spacing={2}
-              sx={{
-                mb: 1,
-                display: "flex",
-                justifyContent: "space-between",
-              }}
-              key={index}
-            >
-              <Stack direction="column">
-                <Typography>{data.label1}</Typography>
-                <Typography>{data.value1}</Typography>
-              </Stack>
-              <Box>
-                <LinearProgress
-                  color="success"
-                  variant="determinate"
-                  value={data.linearValue}
-                  sx={{ width: "30rem", mt: 2 }}
-                />
-              </Box>
-              <Stack direction="column">
-                <Typography>{data.label2}</Typography>
-                <Typography>{data.value2}</Typography>
-              </Stack>
-            </Stack>
-          ))}
+          {Data.map((data, index) => PerformanceData(index, data))}
         </CardContent>
         <PerformanceTable />
       </Card>
