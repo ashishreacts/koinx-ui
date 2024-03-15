@@ -1,12 +1,5 @@
-import {
-  Box,
-  Card,
-  CardContent,
-  CardHeader,
-  CardMedia,
-  ImageListItemBar,
-  Typography,
-} from "@mui/material";
+import { Box, Card, CardContent, CardHeader, Typography } from "@mui/material";
+import { TeamMemberImage } from "./TeamMemberImage";
 
 export const AboutTeam = () => {
   const Data = [
@@ -47,19 +40,7 @@ export const AboutTeam = () => {
       </CardContent>
       {Data.map((data, index) => (
         <Card key={index} sx={{ display: "flex", m: 2 }}>
-          <Box>
-            <CardMedia
-              component="img"
-              sx={{ width: 120, p: 1 }}
-              image={data.image}
-            />
-            <ImageListItemBar
-              title={data.name}
-              subtitle={<span>{data.designation}</span>}
-              position="below"
-              sx={{ ml: 1 }}
-            />
-          </Box>
+          {TeamMemberImage(data)}
           <Box sx={{ display: "flex", flexDirection: "column" }}>
             <CardContent sx={{ flex: "0 1 auto" }}>
               <Typography component="p" sx={{ mb: 1 }} align="justify">

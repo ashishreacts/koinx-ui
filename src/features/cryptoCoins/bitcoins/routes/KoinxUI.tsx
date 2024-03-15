@@ -1,13 +1,13 @@
 import { ContentLayout } from "@/components/Layout";
-import { BitcoinBreadCrumb } from "../components/BitcoinBreadCrumb";
 import { Grid, Stack } from "@mui/material";
+import { AboutCoin } from "../components/AboutCoin";
+import { AboutTeam } from "../components/AboutTeam";
+import { BitcoinBreadCrumb } from "../components/BitcoinBreadCrumb";
 import { BitcoinOverview } from "../components/BitcoinOverview";
+import { BrandAdvertisement } from "../components/BrandAdvertisement";
 import { FeatureTabs } from "../components/FeatureTabs";
 import { Sentiment } from "../components/Sentiment";
-import { AboutCoin } from "../components/AboutCoin";
 import { Tokenomics } from "../components/Tokenomics";
-import { AboutTeam } from "../components/AboutTeam";
-import { BrandAdvertisement } from "../components/BrandAdvertisement";
 import { TrendingCoins } from "../components/TrendingCoins";
 
 export const KoinxUI = () => {
