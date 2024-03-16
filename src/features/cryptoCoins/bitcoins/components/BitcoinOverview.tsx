@@ -6,6 +6,7 @@ import {
   CardHeader,
   Chip,
   Divider,
+  Grid,
   Stack,
   Typography,
 } from "@mui/material";
@@ -37,14 +38,22 @@ export const BitcoinOverview = () => {
           <Typography variant="h6">(24H)</Typography>
         </Stack>
         <Divider />
-        <Stack direction="row" spacing={2}>
-          <Typography variant="h5" sx={{ textTransform: "capitalize" }}>
-            Bitcoin Price Chart (USD)
-          </Typography>
-          {chipLabels.map((labels, index) => (
-            <Chip label={labels} key={index} />
-          ))}
-        </Stack>
+        <Grid container spacing={2} marginTop={0.5}>
+          <Grid item xs={12} md={6}>
+            <Stack direction="row" spacing={2}>
+              <Typography variant="h5" sx={{ textTransform: "capitalize" }}>
+                Bitcoin Price Chart (USD)
+              </Typography>
+            </Stack>
+          </Grid>
+          <Grid item xs={12} md={6}>
+            <Stack direction="row" spacing={1}>
+              {chipLabels.map((label, index) => (
+                <Chip label={label} key={index} />
+              ))}
+            </Stack>
+          </Grid>
+        </Grid>
         <CryptoPriceLineChart />
       </CardContent>
     </Card>

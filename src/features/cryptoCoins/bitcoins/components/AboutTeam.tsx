@@ -1,8 +1,15 @@
-import { Box, Card, CardContent, CardHeader, Typography } from "@mui/material";
-import { TeamMemberImage } from "./TeamMemberImage";
+import {
+  Box,
+  Card,
+  CardContent,
+  CardHeader,
+  CardMedia,
+  ImageListItemBar,
+  Typography,
+} from "@mui/material";
 
 export const AboutTeam = () => {
-  const Data = [
+  const teamData = [
     {
       name: "John Doe",
       designation: "Designation here",
@@ -38,9 +45,22 @@ export const AboutTeam = () => {
           quam. Facilisis purus convallis quam augue.
         </Typography>
       </CardContent>
-      {Data.map((data, index) => (
+      {teamData.map((data, index) => (
         <Card key={index} sx={{ display: "flex", m: 2 }}>
-          {TeamMemberImage(data)}
+          <Box>
+            <CardMedia
+              component="img"
+              sx={{ width: 120, p: 1 }}
+              image={data.image}
+            />
+
+            <ImageListItemBar
+              title={data.name}
+              subtitle={<span>{data.designation}</span>}
+              position="below"
+              sx={{ ml: 1 }}
+            />
+          </Box>
           <Box sx={{ display: "flex", flexDirection: "column" }}>
             <CardContent sx={{ flex: "0 1 auto" }}>
               <Typography component="p" sx={{ mb: 1 }} align="justify">
