@@ -16,7 +16,7 @@ export const Landing = () => {
           <Link to="/app/plans">Go to Plans</Link>
         </li>
         <li>
-          <Link to="/app/bitcoin">Go to Bitcoin</Link>
+          <Link to="/app/koinxUI">Go to Bitcoin</Link>
         </li>
       </ul>
     </>

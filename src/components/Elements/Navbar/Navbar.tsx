@@ -1,8 +1,9 @@
 import React from "react";
-import { Box } from "../Box";
-import { Typography } from "../Typography";
 import {
   AppBar,
+  Box,
+  Button,
+  CssBaseline,
   Divider,
   Drawer,
   IconButton,
@@ -11,9 +12,8 @@ import {
   ListItemButton,
   ListItemText,
   Toolbar,
+  Typography,
 } from "@mui/material";
-import { CssBaseline } from "../CssBaseline";
-import { Button } from "../Button";
 import MenuIcon from "@mui/icons-material/Menu";
 
 type NavProps = {
