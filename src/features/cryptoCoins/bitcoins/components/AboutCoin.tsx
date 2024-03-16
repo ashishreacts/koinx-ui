@@ -28,7 +28,7 @@ export const AboutCoin = () => {
         <Typography variant="subtitle1" fontWeight={600}>
           What is Bitcoin?
         </Typography>
-        <Typography>
+        <Typography align="justify">
           Bitcoin's price today is US$16,951.82, with a 24-hour trading volume
           of $19.14 B. BTC is +0.36% in the last 24 hours. It is currently
           -7.70% from its 7-day all-time high of $18,366.66, and 3.40% from its
@@ -41,7 +41,7 @@ export const AboutCoin = () => {
         <Typography variant="subtitle1" fontWeight={600}>
           Lorem ipsum dolor sit amet
         </Typography>
-        <Typography>
+        <Typography align="justify">
           Lorem ipsum dolor sit amet consectetur. Aliquam placerat sit lobortis
           tristique pharetra. Diam id et lectus urna et tellus aliquam dictum
           at. Viverra diam suspendisse enim facilisi diam ut sed. Quam
@@ -50,7 +50,7 @@ export const AboutCoin = () => {
           fermentum sapien morbi sodales odio sed rhoncus.
         </Typography>
         <br />
-        <Typography>
+        <Typography align="justify">
           Diam praesent massa dapibus magna aliquam a dictumst volutpat. Egestas
           vitae pellentesque auctor amet. Nunc sagittis libero adipiscing cursus
           felis pellentesque interdum. Odio cursus phasellus velit in senectus
@@ -61,7 +61,7 @@ export const AboutCoin = () => {
           at.
         </Typography>
         <br />
-        <Typography>
+        <Typography align="justify">
           Fermentum hendrerit imperdiet nulla viverra faucibus. Sit aliquam
           massa vel convallis duis ac. Mi adipiscing semper scelerisque
           porttitor pulvinar nunc risus. Fermentum potenti laculis congue ipsum
