@@ -1,4 +1,4 @@
-import { Box, CardMedia, ImageListItemBar } from "@mui/material";
+import { ImageList, ImageListItem, ImageListItemBar } from "@mui/material";
 
 export const TeamMemberImage = (data: {
   name: string;
@@ -7,14 +7,18 @@ export const TeamMemberImage = (data: {
   content: string;
 }) => {
   return (
-    <Box>
-      <CardMedia component="img" sx={{ p: 1 }} image={data.image} />
-      <ImageListItemBar
-        title={data.name}
-        subtitle={<span>{data.designation}</span>}
-        position="below"
-        sx={{ ml: 1 }}
-      />
-    </Box>
+    <ImageList cols={1}>
+      <ImageListItem>
+        <img src={data.image} alt="John Smith" />
+        <ImageListItemBar
+          position="below"
+          title={data.name}
+          subtitle={data.designation}
+          sx={{
+            textAlign: "center",
+          }}
+        />
+      </ImageListItem>
+    </ImageList>
   );
 };
