@@ -77,11 +77,15 @@ export const KeyEventSlider = () => {
 
   return (
     <Box sx={{ maxWidth: "85rem" }}>
-      {/* Container with fixed width */}
       <Slider {...settings}>
         {items.map((item) => (
           <Box key={item.id} sx={{ padding: theme.spacing(1) }}>
-            <Card sx={{ p: 1 }}>
+            <Card
+              sx={{
+                p: 1,
+                background: (theme) => theme.palette.highlight.light,
+              }}
+            >
               <Stack direction="row" spacing={2}>
                 <Avatar sx={{ verticalAlign: "middle", bgcolor: green[500] }}>
                   {item.icon}
