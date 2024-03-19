@@ -1,10 +1,10 @@
 import { AccountBalance, Moving, Newspaper } from "@mui/icons-material";
-import { Avatar, Card, Typography, useTheme } from "@mui/material";
-import { green } from "@mui/material/colors";
-import { Box, Stack } from "@mui/system";
+import { useTheme } from "@mui/material";
+import { Box } from "@mui/system";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick-theme.css";
 import "slick-carousel/slick/slick.css";
+import { KeyEventCardData } from "./KeyEventCardData";
 
 export const KeyEventSlider = () => {
   const theme = useTheme();
@@ -79,23 +79,8 @@ export const KeyEventSlider = () => {
     <Box sx={{ maxWidth: "85rem" }}>
       <Slider {...settings}>
         {items.map((item) => (
-          <Box key={item.id} sx={{ padding: theme.spacing(1) }}>
-            <Card
-              sx={{
-                p: 1,
-                background: (theme) => theme.palette.highlight.light,
-              }}
-            >
-              <Stack direction="row" spacing={2}>
-                <Avatar sx={{ verticalAlign: "middle", bgcolor: green[500] }}>
-                  {item.icon}
-                </Avatar>
-                <Stack direction="column" spacing={2}>
-                  <Typography variant="h5">{item.title}</Typography>
-                  <Typography align="justify">{item.description}</Typography>
-                </Stack>
-              </Stack>
-            </Card>
+          <Box key={item.id}>
+            <KeyEventCardData item={item} />
           </Box>
         ))}
       </Slider>
