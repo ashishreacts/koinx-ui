@@ -1,4 +1,4 @@
-import React from "react";
+import MenuIcon from "@mui/icons-material/Menu";
 import {
   AppBar,
   Box,
@@ -11,10 +11,11 @@ import {
   ListItem,
   ListItemButton,
   ListItemText,
+  Stack,
   Toolbar,
   Typography,
 } from "@mui/material";
-import MenuIcon from "@mui/icons-material/Menu";
+import React from "react";
 
 type NavProps = {
   window?: () => Window;
@@ -72,12 +73,12 @@ export const Navbar = ({ children }: NavProps) => {
             />
           </Typography>
           <Box sx={{ display: { xs: "none", sm: "block" } }}>
-            {navItems.map((item) => (
-              <Button key={item} sx={{ color: "#fff" }}>
-                {item}
-              </Button>
-            ))}
-            <Button variant="contained">Get Started</Button>
+            <Stack direction="row" spacing={2}>
+              {navItems.map((item) => (
+                <Typography key={item}>{item}</Typography>
+              ))}
+              <Button variant="contained">Get Started</Button>
+            </Stack>
           </Box>
         </Toolbar>
       </AppBar>
