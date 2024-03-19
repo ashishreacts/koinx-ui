@@ -76,7 +76,12 @@ export const AboutCoin = () => {
       <Grid container spacing={2} sx={{ mt: 1, mb: 1 }}>
         {cardData.map((data, index) => (
           <Grid item xs={12} md={6} key={index}>
-            <Card sx={{ display: "flex" }}>
+            <Card
+              sx={{
+                display: "flex",
+                background: (theme) => theme.palette.highlight.light,
+              }}
+            >
               <CardMedia
                 component="img"
                 sx={{ width: 120, p: 1 }}
