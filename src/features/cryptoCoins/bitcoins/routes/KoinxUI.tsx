@@ -1,7 +1,7 @@
 import { ContentLayout } from "@/components/Layout";
 import { Grid, Stack } from "@mui/material";
 import { AboutCoin } from "../components/AboutCoin";
-import { AboutTeam } from "../components/AboutTeam";
+import { AboutTeam } from "../components/AboutTeam.1";
 import { BitcoinBreadCrumb } from "../components/BitcoinBreadCrumb";
 import { BitcoinOverview } from "../components/BitcoinOverview";
 import { BrandAdvertisement } from "../components/BrandAdvertisement";

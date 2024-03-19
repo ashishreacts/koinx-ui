@@ -4,12 +4,11 @@ export const TeamMemberImage = (data: {
   name: string;
   designation: string;
   image: string;
-  content: string;
 }) => {
   return (
     <ImageList cols={1}>
       <ImageListItem>
-        <img src={data.image} alt="John Smith" />
+        <img src={data.image} />
         <ImageListItemBar
           position="below"
           title={data.name}

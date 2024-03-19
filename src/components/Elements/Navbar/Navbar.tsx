@@ -49,7 +49,7 @@ export const Navbar = ({ children }: NavProps) => {
   );
 
   return (
-    <Box sx={{ display: "flex" }}>
+    <Box>
       <CssBaseline />
       <AppBar component="nav">
         <Toolbar>
@@ -77,6 +77,7 @@ export const Navbar = ({ children }: NavProps) => {
                 {item}
               </Button>
             ))}
+            <Button variant="contained">Get Started</Button>
           </Box>
         </Toolbar>
       </AppBar>

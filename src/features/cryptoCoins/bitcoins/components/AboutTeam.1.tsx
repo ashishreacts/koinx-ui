@@ -1,5 +1,5 @@
-import { Card, CardContent, CardHeader, Typography } from "@mui/material";
-import { TeamMemberData } from "./TeamMemberData";
+import { Card, CardContent, CardHeader, Grid, Typography } from "@mui/material";
+import { TeamMemberImage } from "./TeamMemberImage";
 
 export const AboutTeam = () => {
   const teamData = [
@@ -39,7 +39,29 @@ export const AboutTeam = () => {
         </Typography>
       </CardContent>
       {teamData.map((data, index) => (
-        <TeamMemberData key={index} index={index} data={data} />
+        <Card key={index} sx={{ m: 2 }}>
+          <CardContent>
+            <Grid
+              container
+              alignItems="center"
+              spacing={2}
+              justifyContent="center"
+            >
+              <Grid item xs={12} md={3}>
+                <TeamMemberImage
+                  name={data.name}
+                  designation={data.designation}
+                  image={data.image}
+                />
+              </Grid>
+              <Grid item xs={12} md={9}>
+                <Typography component="p" align="justify">
+                  {data.content}
+                </Typography>
+              </Grid>
+            </Grid>
+          </CardContent>
+        </Card>
       ))}
     </Card>
   );
