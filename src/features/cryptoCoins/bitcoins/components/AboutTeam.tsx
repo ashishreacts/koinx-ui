@@ -39,7 +39,7 @@ export const AboutTeam = () => {
         </Typography>
       </CardContent>
       {teamData.map((data, index) => (
-        <TeamMemberData key={index} index={index} data={data} />
+        <TeamMemberData key={index} data={data} />
       ))}
     </Card>
   );

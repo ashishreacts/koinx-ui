@@ -2,7 +2,6 @@ import { Card, CardContent, Grid, Typography } from "@mui/material";
 import { TeamMemberImage } from "./TeamMemberImage";
 
 type TeamMemberDataProps = {
-  index: number;
   data: {
     name: string;
     designation: string;
@@ -11,9 +10,9 @@ type TeamMemberDataProps = {
   };
 };
 
-export const TeamMemberData = ({ index, data }: TeamMemberDataProps) => {
+export const TeamMemberData = ({ data }: TeamMemberDataProps) => {
   return (
-    <Card key={index} sx={{ m: 2 }}>
+    <Card sx={{ m: 2 }}>
       <CardContent>
         <Grid container alignItems="center" spacing={2} justifyContent="center">
           <Grid item xs={12} md={3}>
