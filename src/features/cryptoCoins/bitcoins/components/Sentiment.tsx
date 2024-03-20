@@ -7,7 +7,6 @@ import {
   Stack,
   Typography,
 } from "@mui/material";
-import { grey } from "@mui/material/colors";
 import { KeyEventSlider } from "./KeyEventSlider";
 
 export const Sentiment = () => {
@@ -24,8 +23,16 @@ export const Sentiment = () => {
             Analyst Estimates <Info sx={{ verticalAlign: "middle" }} />
           </Typography>
           <Stack direction="row" spacing={2} sx={{ mt: 2 }}>
-            <Avatar sx={{ bgcolor: grey[500], width: 100, height: 100 }}>
-              <Typography>76%</Typography>
+            <Avatar
+              sx={{
+                bgcolor: (theme) => theme.palette.highlight.dark,
+                width: 100,
+                height: 100,
+              }}
+            >
+              <Typography sx={{ color: (theme) => theme.palette.primary.main }}>
+                76%
+              </Typography>
             </Avatar>
             <Stack direction="column" spacing={2}>
               <Typography>Buy</Typography>

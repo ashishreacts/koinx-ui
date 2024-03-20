@@ -1,4 +1,4 @@
-import { Card, CardContent, Grid, Typography } from "@mui/material";
+import { Card, Grid, Typography } from "@mui/material";
 import { TeamMemberImage } from "./TeamMemberImage";
 
 type TeamMemberDataProps = {
@@ -13,22 +13,26 @@ type TeamMemberDataProps = {
 export const TeamMemberData = ({ data }: TeamMemberDataProps) => {
   return (
     <Card sx={{ m: 2, background: (theme) => theme.palette.highlight.light }}>
-      <CardContent>
-        <Grid container alignItems="center" spacing={2} justifyContent="center">
-          <Grid item xs={12} md={3}>
-            <TeamMemberImage
-              name={data.name}
-              designation={data.designation}
-              image={data.image}
-            />
-          </Grid>
-          <Grid item xs={12} md={9}>
-            <Typography component="p" align="justify">
-              {data.content}
-            </Typography>
-          </Grid>
+      <Grid
+        container
+        padding={2}
+        alignItems="center"
+        spacing={2}
+        justifyContent="center"
+      >
+        <Grid item xs={12} md={3}>
+          <TeamMemberImage
+            name={data.name}
+            designation={data.designation}
+            image={data.image}
+          />
         </Grid>
-      </CardContent>
+        <Grid item xs={12} md={9}>
+          <Typography component="p" align="justify">
+            {data.content}
+          </Typography>
+        </Grid>
+      </Grid>
     </Card>
   );
 };
