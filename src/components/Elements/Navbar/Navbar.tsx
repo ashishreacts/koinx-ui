@@ -77,7 +77,15 @@ export const Navbar = ({ children }: NavProps) => {
               {navItems.map((item) => (
                 <Typography key={item}>{item}</Typography>
               ))}
-              <Button variant="contained">Get Started</Button>
+              <Button
+                variant="contained"
+                sx={{
+                  bgcolor: (theme) => theme.palette.highlight.main,
+                  color: (theme) => theme.palette.primary.main,
+                }}
+              >
+                Get Started
+              </Button>
             </Stack>
           </Box>
         </Toolbar>

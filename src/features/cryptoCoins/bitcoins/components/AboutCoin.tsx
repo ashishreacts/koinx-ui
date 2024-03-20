@@ -3,7 +3,7 @@ import {
   CardContent,
   CardHeader,
   Divider,
-  Grid,
+  Stack,
   Typography,
 } from "@mui/material";
 import { AboutCoinCardData } from "./AboutCoinCardData";
@@ -71,11 +71,11 @@ export const AboutCoin = () => {
       <CardHeader
         title={<Typography variant="h4">Already Holding Bitcoin?</Typography>}
       />
-      <Grid container spacing={2} sx={{ mt: 1, mb: 1 }}>
+      <Stack direction="row" margin={2} spacing={2}>
         {cardData.map((data, index) => (
           <AboutCoinCardData data={data} key={index} />
         ))}
-      </Grid>
+      </Stack>
 
       <Divider />
       <CardContent>

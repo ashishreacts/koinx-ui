@@ -3,10 +3,10 @@ import {
   Button,
   Card,
   CardContent,
-  CardMedia,
   Grid,
+  ImageListItem,
+  Stack,
   Typography,
-  useTheme,
 } from "@mui/material";
 
 type AboutCoinCardDataProps = {
@@ -16,29 +16,32 @@ type AboutCoinCardDataProps = {
   };
 };
 
-export function AboutCoinCardData({ data }: AboutCoinCardDataProps) {
-  const theme = useTheme();
+export const AboutCoinCardData = ({ data }: AboutCoinCardDataProps) => {
   return (
-    <Grid item xs={12} md={6}>
-      <Card
-        sx={{
-          display: "flex",
-          background: (theme) => theme.palette.highlight.light,
-          margin: theme.spacing(1),
-          padding: theme.spacing(1),
-        }}
-      >
-        <CardMedia sx={{ width: 150 }} image={data.src} />
-        <CardContent>
-          <Typography variant="h6">{data.label}</Typography>
-          <Button
-            variant="contained"
-            sx={{ backgroundColor: "white", color: "inherit" }}
-          >
-            Check Now <ArrowForward />
-          </Button>
-        </CardContent>
-      </Card>
-    </Grid>
+    <Card
+      sx={{
+        background: (theme) => theme.palette.highlight.light,
+      }}
+    >
+      <CardContent>
+        <Grid container>
+          <Grid item xs={5}>
+            <ImageListItem>
+              <img src={data.src} />
+            </ImageListItem>
+          </Grid>
+          <Grid item xs={7}>
+            <Stack direction="column" margin={1} spacing={2}>
+              <Typography textAlign="center" variant="h6">
+                {data.label}
+              </Typography>
+              <Button variant="contained" endIcon={<ArrowForward />}>
+                Check Now
+              </Button>
+            </Stack>
+          </Grid>
+        </Grid>
+      </CardContent>
+    </Card>
   );
-}
+};

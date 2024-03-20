@@ -16,11 +16,9 @@ export const Sentiment = () => {
       <CardHeader title={<Typography variant="h4">Sentiment</Typography>} />
       <Stack direction="column" spacing={2}>
         <CardContent>
-          <Stack direction="row">
-            <Typography variant="subtitle1">
-              Key Events <Info sx={{ verticalAlign: "middle" }} />
-            </Typography>
-          </Stack>
+          <Typography variant="subtitle1">
+            Key Events <Info sx={{ verticalAlign: "middle" }} />
+          </Typography>
           <KeyEventSlider />
           <Typography variant="subtitle1">
             Analyst Estimates <Info sx={{ verticalAlign: "middle" }} />
