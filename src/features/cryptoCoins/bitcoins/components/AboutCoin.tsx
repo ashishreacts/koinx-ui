@@ -1,14 +1,12 @@
-import { ArrowForward } from "@mui/icons-material";
 import {
-  Button,
   Card,
   CardContent,
   CardHeader,
-  CardMedia,
   Divider,
   Grid,
   Typography,
 } from "@mui/material";
+import { AboutCoinCardData } from "./AboutCoinCardData";
 
 export const AboutCoin = () => {
   const cardData = [
@@ -75,42 +73,20 @@ export const AboutCoin = () => {
       />
       <Grid container spacing={2} sx={{ mt: 1, mb: 1 }}>
         {cardData.map((data, index) => (
-          <Grid item xs={12} md={6} key={index}>
-            <Card
-              sx={{
-                display: "flex",
-                background: (theme) => theme.palette.highlight.light,
-              }}
-            >
-              <CardMedia
-                component="img"
-                sx={{ width: 120, p: 1 }}
-                image={data.src}
-              />
-              <CardContent sx={{ flex: "1 0 auto" }}>
-                <Typography component="div" variant="h5">
-                  {data.label}
-                </Typography>
-                <Button
-                  variant="contained"
-                  sx={{ backgroundColor: "white", color: "inherit" }}
-                >
-                  Check Now <ArrowForward />
-                </Button>
-              </CardContent>
-            </Card>
-          </Grid>
+          <AboutCoinCardData data={data} key={index} />
         ))}
       </Grid>
 
       <Divider />
-      <Typography sx={{ mt: 1 }}>
-        Fermentum hendrerit imperdiet nulla viverra faucibus. Sit aliquam massa
-        vel convallis duis ac. Mi adipiscing semper scelerisque porttitor
-        pulvinar nunc risus. Fermentum potenti iaculis lacinia congue ipsum
-        fames amet dui. Purus ultrices tincidunt volutpat in eget. Ullamcorper
-        dui
-      </Typography>
+      <CardContent>
+        <Typography>
+          Fermentum hendrerit imperdiet nulla viverra faucibus. Sit aliquam
+          massa vel convallis duis ac. Mi adipiscing semper scelerisque
+          porttitor pulvinar nunc risus. Fermentum potenti iaculis lacinia
+          congue ipsum fames amet dui. Purus ultrices tincidunt volutpat in
+          eget. Ullamcorper dui
+        </Typography>
+      </CardContent>
     </Card>
   );
 };

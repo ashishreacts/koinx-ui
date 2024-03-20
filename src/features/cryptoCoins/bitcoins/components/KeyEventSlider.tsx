@@ -55,7 +55,7 @@ export const KeyEventSlider = () => {
     dots: false,
     infinite: true,
     speed: 500,
-    slidesToShow: 3,
+    slidesToShow: 2,
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 5000,
@@ -76,7 +76,7 @@ export const KeyEventSlider = () => {
   };
 
   return (
-    <Box sx={{ maxWidth: "85rem" }}>
+    <Box>
       <Slider {...settings}>
         {items.map((item) => (
           <Box key={item.id}>
