@@ -73,7 +73,7 @@ export const Navbar = ({ children }: NavProps) => {
             />
           </Typography>
           <Box sx={{ display: { xs: "none", sm: "block" } }}>
-            <Stack direction="row" spacing={2}>
+            <Stack direction="row" alignItems="center" spacing={2}>
               {navItems.map((item) => (
                 <Typography key={item}>{item}</Typography>
               ))}
