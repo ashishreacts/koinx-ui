@@ -23,12 +23,12 @@ export const AboutCoinCardData = ({ data }: AboutCoinCardDataProps) => {
       }}
     >
       <Grid container padding={2}>
-        <Grid item xs={5}>
+        <Grid item xs={12} md={5}>
           <ImageListItem>
             <img src={data.src} />
           </ImageListItem>
         </Grid>
-        <Grid item xs={7}>
+        <Grid item md={7}>
           <Stack direction="column" margin={1} spacing={2}>
             <Typography textAlign="center" variant="h6">
               {data.label}

@@ -27,7 +27,7 @@ export const TeamMemberData = ({ data }: TeamMemberDataProps) => {
             image={data.image}
           />
         </Grid>
-        <Grid item xs={12} md={9}>
+        <Grid item md={9}>
           <Typography component="p" align="justify">
             {data.content}
           </Typography>

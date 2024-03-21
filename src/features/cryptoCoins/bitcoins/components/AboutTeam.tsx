@@ -37,10 +37,10 @@ export const AboutTeam = () => {
           nibh. Eget mattis in mi integer sit egestas. Proin tempor id pretium
           quam. Facilisis purus convallis quam augue.
         </Typography>
+        {teamData.map((data, index) => (
+          <TeamMemberData key={index} data={data} />
+        ))}
       </CardContent>
-      {teamData.map((data, index) => (
-        <TeamMemberData key={index} data={data} />
-      ))}
     </Card>
   );
 };
