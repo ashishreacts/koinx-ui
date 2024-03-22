@@ -40,12 +40,13 @@ export const MultipleTabs = () => {
               label={
                 <Typography
                   sx={{
+                    textTransform: "none",
                     color: (theme) =>
                       value === index
                         ? theme.palette.highlight.main
                         : "inherit",
                   }}
-                  component="p"
+                  variant="h6"
                 >
                   {label}
                 </Typography>
