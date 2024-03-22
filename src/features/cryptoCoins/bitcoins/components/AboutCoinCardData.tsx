@@ -22,14 +22,14 @@ export const AboutCoinCardData = ({ data }: AboutCoinCardDataProps) => {
         background: (theme) => theme.palette.highlight.light,
       }}
     >
-      <Grid container padding={2}>
-        <Grid item xs={12} md={5}>
+      <Grid container alignItems="center" padding={2} spacing={2}>
+        <Grid item xs={5}>
           <ImageListItem>
             <img src={data.src} />
           </ImageListItem>
         </Grid>
-        <Grid item md={7}>
-          <Stack direction="column" margin={1} spacing={2}>
+        <Grid item xs={7}>
+          <Stack direction="column" spacing={2}>
             <Typography textAlign="center" variant="h6">
               {data.label}
             </Typography>
