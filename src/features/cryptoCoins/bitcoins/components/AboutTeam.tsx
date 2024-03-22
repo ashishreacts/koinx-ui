@@ -32,7 +32,7 @@ export const AboutTeam = () => {
     <Card>
       <CardHeader title={<Typography variant="h4">Team</Typography>} />
       <CardContent>
-        <Typography component="p" sx={{ mb: 1 }} align="justify">
+        <Typography component="p" align="justify">
           Lorem ipsum dolor sit amet consectetur. Id consequat adipiscing arcu
           nibh. Eget mattis in mi integer sit egestas. Proin tempor id pretium
           quam. Facilisis purus convallis quam augue.
