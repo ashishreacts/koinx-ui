@@ -1,4 +1,10 @@
-import { Card, CardContent, CardHeader, Typography } from "@mui/material";
+import {
+  Card,
+  CardContent,
+  CardHeader,
+  Stack,
+  Typography,
+} from "@mui/material";
 import { TeamMemberData } from "./TeamMemberData";
 
 export const AboutTeam = () => {
@@ -32,14 +38,16 @@ export const AboutTeam = () => {
     <Card>
       <CardHeader title={<Typography variant="h4">Team</Typography>} />
       <CardContent>
-        <Typography component="p" align="justify">
-          Lorem ipsum dolor sit amet consectetur. Id consequat adipiscing arcu
-          nibh. Eget mattis in mi integer sit egestas. Proin tempor id pretium
-          quam. Facilisis purus convallis quam augue.
-        </Typography>
-        {teamData.map((data, index) => (
-          <TeamMemberData key={index} data={data} />
-        ))}
+        <Stack spacing={2}>
+          <Typography component="p" align="justify">
+            Lorem ipsum dolor sit amet consectetur. Id consequat adipiscing arcu
+            nibh. Eget mattis in mi integer sit egestas. Proin tempor id pretium
+            quam. Facilisis purus convallis quam augue.
+          </Typography>
+          {teamData.map((data, index) => (
+            <TeamMemberData key={index} data={data} />
+          ))}
+        </Stack>
       </CardContent>
     </Card>
   );

@@ -12,9 +12,7 @@ type TeamMemberDataProps = {
 
 export const TeamMemberData = ({ data }: TeamMemberDataProps) => {
   return (
-    <Card
-      sx={{ marginY: 1, background: (theme) => theme.palette.highlight.light }}
-    >
+    <Card sx={{ background: (theme) => theme.palette.highlight.light }}>
       <Grid
         container
         padding={2}
@@ -22,14 +20,14 @@ export const TeamMemberData = ({ data }: TeamMemberDataProps) => {
         spacing={2}
         justifyContent="center"
       >
-        <Grid item xs={12} md={3}>
+        <Grid item xs={12} md={2}>
           <TeamMemberImage
             name={data.name}
             designation={data.designation}
             image={data.image}
           />
         </Grid>
-        <Grid item md={9}>
+        <Grid item md={10}>
           <Typography component="p" align="justify">
             {data.content}
           </Typography>
