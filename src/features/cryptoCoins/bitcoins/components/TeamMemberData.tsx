@@ -12,7 +12,9 @@ type TeamMemberDataProps = {
 
 export const TeamMemberData = ({ data }: TeamMemberDataProps) => {
   return (
-    <Card sx={{ m: 2, background: (theme) => theme.palette.highlight.light }}>
+    <Card
+      sx={{ marginY: 1, background: (theme) => theme.palette.highlight.light }}
+    >
       <Grid
         container
         padding={2}

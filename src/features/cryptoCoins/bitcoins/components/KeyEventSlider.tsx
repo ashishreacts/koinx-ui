@@ -78,8 +78,8 @@ export const KeyEventSlider = () => {
   return (
     <Box>
       <Slider {...settings}>
-        {items.map((item) => (
-          <Box key={item.id}>
+        {items.map((item, index) => (
+          <Box key={index}>
             <KeyEventCardData item={item} />
           </Box>
         ))}

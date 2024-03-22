@@ -38,8 +38,8 @@ export const Navbar = ({ children }: NavProps) => {
       </Typography>
       <Divider />
       <List>
-        {navItems.map((item) => (
-          <ListItem key={item} disablePadding>
+        {navItems.map((item, index) => (
+          <ListItem key={index} disablePadding>
             <ListItemButton sx={{ textAlign: "center" }}>
               <ListItemText primary={item} />
             </ListItemButton>
@@ -74,8 +74,8 @@ export const Navbar = ({ children }: NavProps) => {
           </Typography>
           <Box sx={{ display: { xs: "none", sm: "block" } }}>
             <Stack direction="row" alignItems="center" spacing={2}>
-              {navItems.map((item) => (
-                <Typography key={item}>{item}</Typography>
+              {navItems.map((item, index) => (
+                <Typography key={index}>{item}</Typography>
               ))}
               <Button
                 variant="contained"
