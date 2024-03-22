@@ -78,13 +78,17 @@ export const Navbar = ({ children }: NavProps) => {
                 <Typography key={index}>{item}</Typography>
               ))}
               <Button
-                variant="contained"
                 sx={{
-                  bgcolor: (theme) => theme.palette.highlight.main,
-                  color: (theme) => theme.palette.primary.main,
+                  textTransform: "none",
+                  background: (theme) => theme.palette.highlight.gradient,
                 }}
               >
-                Get Started
+                <Typography
+                  variant="h6"
+                  sx={{ color: (theme) => theme.palette.primary.main }}
+                >
+                  Get Started
+                </Typography>
               </Button>
             </Stack>
           </Box>
