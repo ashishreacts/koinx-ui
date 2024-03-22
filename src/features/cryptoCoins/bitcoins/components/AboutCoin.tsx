@@ -74,8 +74,8 @@ export const AboutCoin = () => {
 
       <Grid container padding={2} spacing={2}>
         {cardData.map((data, index) => (
-          <Grid item alignItems="center" xs={12} md={6}>
-            <AboutCoinCardData data={data} key={index} />
+          <Grid item alignItems="center" xs={12} md={6} key={index}>
+            <AboutCoinCardData data={data} />
           </Grid>
         ))}
       </Grid>
