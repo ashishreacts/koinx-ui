@@ -1,4 +1,4 @@
-import { Box, Tab, Tabs } from "@mui/material";
+import { Box, Tab, Tabs, Typography } from "@mui/material";
 import React from "react";
 
 function a11yProps(index: number) {
@@ -29,9 +29,30 @@ export const MultipleTabs = () => {
           value={value}
           onChange={handleChange}
           aria-label="basic tabs example"
+          TabIndicatorProps={{
+            sx: {
+              backgroundColor: (theme) => theme.palette.highlight.main,
+            },
+          }}
         >
           {tabLabel.map((label, index) => (
-            <Tab label={label} {...a11yProps(index)} key={index} />
+            <Tab
+              label={
+                <Typography
+                  sx={{
+                    color: (theme) =>
+                      value === index
+                        ? theme.palette.highlight.main
+                        : "inherit",
+                  }}
+                  component="p"
+                >
+                  {label}
+                </Typography>
+              }
+              {...a11yProps(index)}
+              key={index}
+            />
           ))}
         </Tabs>
       </Box>
