@@ -1,3 +1,4 @@
+import { useTheme } from "@mui/material/styles";
 import {
   CategoryScale,
   Chart as ChartJS,
@@ -21,26 +22,29 @@ ChartJS.register(
   Legend
 );
 
-const options = {
-  responsive: true,
-  plugins: {
-    legend: {
-      position: "top" as const,
-    },
-  },
-};
-
-const data = {
-  labels: revenueData.map((data) => data.label),
-  datasets: [
-    {
-      label: "Revenue",
-      data: revenueData.map((data) => data.revenue),
-      borderColor: "rgb(255, 99, 132)",
-      backgroundColor: "rgba(255, 99, 132, 0.5)",
-    },
-  ],
-};
 export const CryptoPriceLineChart = () => {
+  const theme = useTheme();
+
+  const options = {
+    responsive: true,
+    plugins: {
+      legend: {
+        position: "top" as const,
+      },
+    },
+  };
+
+  const data = {
+    labels: revenueData.map((data) => data.label),
+    datasets: [
+      {
+        label: "Revenue",
+        data: revenueData.map((data) => data.revenue),
+        borderColor: theme.palette.highlight.main,
+        backgroundColor: theme.palette.highlight.main + "1A",
+      },
+    ],
+  };
+
   return <Line options={options} data={data} />;
 };
