@@ -1,15 +1,15 @@
 import { Box, LinearProgress, Stack, Typography } from "@mui/material";
 
-export const PerformanceData = (
-  index: number,
+type PerformanceDataProps = {
   data: {
     label1: string;
     value1: string;
     label2: string;
     value2: string;
     linearValue: number;
-  }
-) => {
+  };
+};
+export const PerformanceData = ({ data }: PerformanceDataProps) => {
   return (
     <Stack
       direction="row"
@@ -19,7 +19,6 @@ export const PerformanceData = (
         display: "flex",
         justifyContent: "space-between",
       }}
-      key={index}
     >
       <Stack direction="column">
         <Typography>{data.label1}</Typography>

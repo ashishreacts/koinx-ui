@@ -27,7 +27,9 @@ export const FeatureTabs = () => {
       <Card>
         <CardHeader title={<Typography variant="h4">Performance</Typography>} />
         <CardContent>
-          {Data.map((data, index) => PerformanceData(index, data))}
+          {Data.map((data, index) => (
+            <PerformanceData data={data} key={index} />
+          ))}
         </CardContent>
         <PerformanceTable />
       </Card>

@@ -25,26 +25,22 @@ export const Tokenomics = () => {
   };
   return (
     <Card>
-      <CardHeader
-        title={
-          <Stack direction="column" spacing={2}>
-            <Typography variant="h4">Tokenomics</Typography>
-            <Typography variant="h5">Initial Distribution</Typography>
-          </Stack>
-        }
-      />
-      <Box sx={{ width: "30%" }}>
-        <Doughnut data={data} />
-      </Box>
+      <CardHeader title={<Typography variant="h4">Tokenomics</Typography>} />
       <CardContent>
-        <Typography component="p" sx={{ mb: 1 }} align="justify">
-          Lorem ipsum dolor sit amet consectetur. Aliquam placerat sit lobortis
-          tristique pharetra. Diam id et lectus urna et tellus aliquam dictum
-          at. Viverra diam suspendisse enim facilisi diam ut sed. Quam
-          scelerisque fermentum sapien morbi sodales odio sed rhoncus. Ultricies
-          urna volutpat pendisse enim facilisi diam ut sed. Quam scelerisque
-          fermentum sapien morbi sodales odio sed rhoncus.
-        </Typography>
+        <Stack direction="column" spacing={2}>
+          <Typography variant="h5">Initial Distribution</Typography>
+          <Box sx={{ width: "30%" }}>
+            <Doughnut data={data} />
+          </Box>
+          <Typography component="p" align="justify">
+            Lorem ipsum dolor sit amet consectetur. Aliquam placerat sit
+            lobortis tristique pharetra. Diam id et lectus urna et tellus
+            aliquam dictum at. Viverra diam suspendisse enim facilisi diam ut
+            sed. Quam scelerisque fermentum sapien morbi sodales odio sed
+            rhoncus. Ultricies urna volutpat pendisse enim facilisi diam ut sed.
+            Quam scelerisque fermentum sapien morbi sodales odio sed rhoncus.
+          </Typography>
+        </Stack>
       </CardContent>
     </Card>
   );

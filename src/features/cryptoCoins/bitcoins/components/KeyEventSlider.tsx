@@ -1,10 +1,10 @@
 import { AccountBalance, Moving, Newspaper } from "@mui/icons-material";
-import { Avatar, Card, Typography, useTheme } from "@mui/material";
-import { green } from "@mui/material/colors";
-import { Box, Stack } from "@mui/system";
+import { useTheme } from "@mui/material";
+import { Box } from "@mui/system";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick-theme.css";
 import "slick-carousel/slick/slick.css";
+import { KeyEventCardData } from "./KeyEventCardData";
 
 export const KeyEventSlider = () => {
   const theme = useTheme();
@@ -55,7 +55,7 @@ export const KeyEventSlider = () => {
     dots: false,
     infinite: true,
     speed: 500,
-    slidesToShow: 3,
+    slidesToShow: 2,
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 5000,
@@ -76,22 +76,11 @@ export const KeyEventSlider = () => {
   };
 
   return (
-    <Box sx={{ maxWidth: "85rem" }}>
-      {/* Container with fixed width */}
+    <Box>
       <Slider {...settings}>
-        {items.map((item) => (
-          <Box key={item.id} sx={{ padding: theme.spacing(1) }}>
-            <Card sx={{ p: 1 }}>
-              <Stack direction="row" spacing={2}>
-                <Avatar sx={{ verticalAlign: "middle", bgcolor: green[500] }}>
-                  {item.icon}
-                </Avatar>
-                <Stack direction="column" spacing={2}>
-                  <Typography variant="h5">{item.title}</Typography>
-                  <Typography align="justify">{item.description}</Typography>
-                </Stack>
-              </Stack>
-            </Card>
+        {items.map((item, index) => (
+          <Box key={index}>
+            <KeyEventCardData item={item} />
           </Box>
         ))}
       </Slider>

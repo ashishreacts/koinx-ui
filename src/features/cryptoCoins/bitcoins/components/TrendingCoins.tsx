@@ -37,10 +37,10 @@ function TrendingCoin() {
         <CryptoIcon currencyCode={CurrencyCode.BTC} />
         <Typography>Bitcoin (BTC)</Typography>
       </Stack>
-      <Typography>
+      <Stack direction="row" spacing={1} alignItems="center">
         <ArrowDropUp sx={{ verticalAlign: "middle" }} />
         2.51%
-      </Typography>
+      </Stack>
     </Stack>
   );
 }

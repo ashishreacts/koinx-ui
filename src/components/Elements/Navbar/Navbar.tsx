@@ -1,4 +1,4 @@
-import React from "react";
+import MenuIcon from "@mui/icons-material/Menu";
 import {
   AppBar,
   Box,
@@ -11,10 +11,11 @@ import {
   ListItem,
   ListItemButton,
   ListItemText,
+  Stack,
   Toolbar,
   Typography,
 } from "@mui/material";
-import MenuIcon from "@mui/icons-material/Menu";
+import React from "react";
 
 type NavProps = {
   window?: () => Window;
@@ -37,8 +38,8 @@ export const Navbar = ({ children }: NavProps) => {
       </Typography>
       <Divider />
       <List>
-        {navItems.map((item) => (
-          <ListItem key={item} disablePadding>
+        {navItems.map((item, index) => (
+          <ListItem key={index} disablePadding>
             <ListItemButton sx={{ textAlign: "center" }}>
               <ListItemText primary={item} />
             </ListItemButton>
@@ -72,12 +73,24 @@ export const Navbar = ({ children }: NavProps) => {
             />
           </Typography>
           <Box sx={{ display: { xs: "none", sm: "block" } }}>
-            {navItems.map((item) => (
-              <Button key={item} sx={{ color: "#fff" }}>
-                {item}
+            <Stack direction="row" alignItems="center" spacing={2}>
+              {navItems.map((item, index) => (
+                <Typography key={index}>{item}</Typography>
+              ))}
+              <Button
+                sx={{
+                  textTransform: "none",
+                  background: (theme) => theme.palette.highlight.gradient,
+                }}
+              >
+                <Typography
+                  variant="h6"
+                  sx={{ color: (theme) => theme.palette.primary.main }}
+                >
+                  Get Started
+                </Typography>
               </Button>
-            ))}
-            <Button variant="contained">Get Started</Button>
+            </Stack>
           </Box>
         </Toolbar>
       </AppBar>

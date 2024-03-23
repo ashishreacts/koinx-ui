@@ -21,8 +21,8 @@ const PlanList = () => {
       <h2>Choose a Plan</h2>
       <CryptoIcon currencyCode={CurrencyCode.BTC} />
       <ul>
-        {plans.map((plan) => (
-          <li key={plan.id}>
+        {plans.map((plan, index) => (
+          <li key={index}>
             <h3>{plan.name}</h3>
             <p>{plan.price}</p>
             <ul>

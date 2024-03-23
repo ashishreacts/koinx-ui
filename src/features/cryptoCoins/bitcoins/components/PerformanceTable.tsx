@@ -49,9 +49,9 @@ export const PerformanceTable = () => {
           <TableContainer>
             <Table sx={{ minWidth: 300 }} aria-label="simple table">
               <TableBody>
-                {rowData[0].map((row) => (
+                {rowData[0].map((row, index) => (
                   <TableRow
-                    key={row.name}
+                    key={index}
                     sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
                   >
                     <TableCell component="th" scope="row">
@@ -68,9 +68,9 @@ export const PerformanceTable = () => {
           <TableContainer>
             <Table sx={{ minWidth: 300 }} aria-label="simple table">
               <TableBody>
-                {rowData[1].map((row) => (
+                {rowData[1].map((row, index) => (
                   <TableRow
-                    key={row.name}
+                    key={index}
                     sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
                   >
                     <TableCell component="th" scope="row">

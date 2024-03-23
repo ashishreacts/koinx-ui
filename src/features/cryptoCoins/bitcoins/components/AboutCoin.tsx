@@ -1,14 +1,12 @@
-import { ArrowForward } from "@mui/icons-material";
 import {
-  Button,
   Card,
   CardContent,
   CardHeader,
-  CardMedia,
   Divider,
   Grid,
   Typography,
 } from "@mui/material";
+import { AboutCoinCardData } from "./AboutCoinCardData";
 
 export const AboutCoin = () => {
   const cardData = [
@@ -73,39 +71,25 @@ export const AboutCoin = () => {
       <CardHeader
         title={<Typography variant="h4">Already Holding Bitcoin?</Typography>}
       />
-      <Grid container spacing={2} sx={{ mt: 1, mb: 1 }}>
+
+      <Grid container padding={2} spacing={2}>
         {cardData.map((data, index) => (
-          <Grid item xs={12} md={6} key={index}>
-            <Card sx={{ display: "flex" }}>
-              <CardMedia
-                component="img"
-                sx={{ width: 120, p: 1 }}
-                image={data.src}
-              />
-              <CardContent sx={{ flex: "1 0 auto" }}>
-                <Typography component="div" variant="h5">
-                  {data.label}
-                </Typography>
-                <Button
-                  variant="contained"
-                  sx={{ backgroundColor: "white", color: "inherit" }}
-                >
-                  Check Now <ArrowForward />
-                </Button>
-              </CardContent>
-            </Card>
+          <Grid item alignItems="center" xs={12} md={6} key={index}>
+            <AboutCoinCardData data={data} />
           </Grid>
         ))}
       </Grid>
 
       <Divider />
-      <Typography sx={{ mt: 1 }}>
-        Fermentum hendrerit imperdiet nulla viverra faucibus. Sit aliquam massa
-        vel convallis duis ac. Mi adipiscing semper scelerisque porttitor
-        pulvinar nunc risus. Fermentum potenti iaculis lacinia congue ipsum
-        fames amet dui. Purus ultrices tincidunt volutpat in eget. Ullamcorper
-        dui
-      </Typography>
+      <CardContent>
+        <Typography>
+          Fermentum hendrerit imperdiet nulla viverra faucibus. Sit aliquam
+          massa vel convallis duis ac. Mi adipiscing semper scelerisque
+          porttitor pulvinar nunc risus. Fermentum potenti iaculis lacinia
+          congue ipsum fames amet dui. Purus ultrices tincidunt volutpat in
+          eget. Ullamcorper dui
+        </Typography>
+      </CardContent>
     </Card>
   );
 };
