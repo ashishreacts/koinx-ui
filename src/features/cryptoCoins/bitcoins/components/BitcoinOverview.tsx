@@ -64,6 +64,7 @@ export const BitcoinOverview = () => {
                 sx={{
                   color: (theme) =>
                     value === index ? theme.palette.highlight.main : "inherit",
+                  bgcolor: (theme) => theme.palette.primary.main,
                 }}
               />
             ))}

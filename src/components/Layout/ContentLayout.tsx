@@ -15,7 +15,11 @@ export const ContentLayout = ({ children, title }: ContentLayoutProps) => {
         <Box>
           <Typography variant="h4">{title}</Typography>
         </Box>
-        <Box>{children}</Box>
+        <Box
+          sx={{ marginX: { xs: 1, sm: 4 }, marginY: { xs: 2, sm: 2, md: 4 } }}
+        >
+          {children}
+        </Box>
       </Box>
     </>
   );
