@@ -11,10 +11,15 @@ import {
   Typography,
 } from "@mui/material";
 import { CryptoPriceLineChart } from "./CryptoPriceLineChart";
+import { useState } from "react";
 
 export const BitcoinOverview = () => {
   const chipLabels = ["1H", "24H", "7D", "1M", "3M", "6M", "1Y", "ALL"];
+  const [value, setValue] = useState(0);
 
+  const handleColorChange = (indexValue: number) => {
+    setValue(indexValue);
+  };
   return (
     <Card variant="outlined">
       <CardHeader
@@ -50,9 +55,17 @@ export const BitcoinOverview = () => {
               Bitcoin Price Chart (USD)
             </Typography>
           </Grid>
-          <Grid item xs={12} md={6} sx={{ display: "flex", gap: 1 }}>
+          <Grid item xs={12} md={6} sx={{ display: "flex", gap: 2 }}>
             {chipLabels.map((label, index) => (
-              <Chip label={label} key={index} />
+              <Chip
+                label={label}
+                key={index}
+                onClick={() => handleColorChange(index)}
+                sx={{
+                  color: (theme) =>
+                    value === index ? theme.palette.highlight.main : "inherit",
+                }}
+              />
             ))}
           </Grid>
         </Grid>
