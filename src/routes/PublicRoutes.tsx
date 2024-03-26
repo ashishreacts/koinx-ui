@@ -1,19 +1,17 @@
 import { CreateCoinxUI } from "@/features/cryptoCoins";
-import { Navigate, RouteObject } from "react-router-dom";
+import { Landing } from "@/features/misc";
+import { RouteObject } from "react-router-dom";
 import { MainLayoutWrapper } from "./MainLayoutWrapper";
 
 export const PublicRoutes: RouteObject[] = [
-  // {
-  //   path: "/",
-  //   element: <Landing />,
-  // },
   {
     path: "/",
     element: <MainLayoutWrapper />,
-    children: [
-      { path: "", element: <Navigate to="/app/koinxUI" /> },
-      { path: "/app/koinxUI/*", element: <CreateCoinxUI /> },
-    ],
+    children: [{ path: "", element: <CreateCoinxUI /> }],
+  },
+  {
+    path: "/app",
+    element: <Landing />,
   },
   // import { AuthRoutes } from '@/features/auth';
   //   {
