@@ -113,7 +113,7 @@ export const Navbar = ({ children }: NavProps) => {
           {drawer}
         </Drawer>
       </nav>
-      <Box component="main" sx={{ p: 3 }}>
+      <Box component="main">
         <Toolbar />
         {children}
       </Box>

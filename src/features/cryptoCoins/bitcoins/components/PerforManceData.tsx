@@ -20,22 +20,20 @@ export const PerformanceData = ({ data }: PerformanceDataProps) => {
         justifyContent: "space-between",
       }}
     >
-      <Stack direction="column">
+      <Box>
         <Typography>{data.label1}</Typography>
         <Typography>{data.value1}</Typography>
-      </Stack>
-      <Box>
-        <LinearProgress
-          color="success"
-          variant="determinate"
-          value={data.linearValue}
-          sx={{ width: "30rem", mt: 2 }}
-        />
       </Box>
-      <Stack direction="column">
+      <LinearProgress
+        color="success"
+        variant="determinate"
+        value={data.linearValue}
+        sx={{ width: "30rem", top: 20 }}
+      />
+      <Box>
         <Typography>{data.label2}</Typography>
         <Typography>{data.value2}</Typography>
-      </Stack>
+      </Box>
     </Stack>
   );
 };

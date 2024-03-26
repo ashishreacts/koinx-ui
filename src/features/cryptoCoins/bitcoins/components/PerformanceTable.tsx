@@ -44,7 +44,7 @@ export const PerformanceTable = () => {
         }
       />
 
-      <Grid container marginTop={0.5} spacing={2}>
+      <Grid container spacing={2}>
         <Grid item xs={12} md={6}>
           <TableContainer>
             <Table sx={{ minWidth: 300 }} aria-label="simple table">
